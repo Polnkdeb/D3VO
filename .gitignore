@@ -1,9 +1,27 @@
+# CMake build
 build/
-*.so
-*.pyc
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Python cache
 __pycache__/
+*.pyc
+*.pyo
+
+# Shared libs
+*.so
+*.dll
+*.dylib
+
+# Archives
 *.tar.gz
 *.zip
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
 *.log
-*.swp
-*.swo
