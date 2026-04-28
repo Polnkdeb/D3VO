@@ -1,0 +1,9 @@
+build/
+*.so
+*.pyc
+__pycache__/
+*.tar.gz
+*.zip
+*.log
+*.swp
+*.swo

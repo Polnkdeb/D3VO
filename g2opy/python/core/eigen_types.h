@@ -181,11 +181,11 @@ void declareEigenTypes(py::module & m) {
         .def_static("from_two_vectors", [](Eigen::Matrix<double, 3, 1>& a, Eigen::Matrix<double, 3, 1>& b) {
                 return Eigen::Quaterniond::FromTwoVectors(a, b);
             })
+        .def("x", (Eigen::Quaterniond::CoeffReturnType (Eigen::Quaterniond::*) () const) &Eigen::Quaterniond::x)
+        .def("y", (Eigen::Quaterniond::CoeffReturnType (Eigen::Quaterniond::*) () const) &Eigen::Quaterniond::y)
+        .def("z", (Eigen::Quaterniond::CoeffReturnType (Eigen::Quaterniond::*) () const) &Eigen::Quaterniond::z)  
+        .def("w", (Eigen::Quaterniond::CoeffReturnType (Eigen::Quaterniond::*) () const) &Eigen::Quaterniond::w)
 
-        .def("x", [](const Eigen::Quaterniond& q) { return q.x(); })
-        .def("y", [](const Eigen::Quaterniond& q) { return q.y(); })
-        .def("z", [](const Eigen::Quaterniond& q) { return q.z(); })
-        .def("w", [](const Eigen::Quaterniond& q) { return q.w(); })
 
         .def("vec", (const Eigen::VectorBlock<const Eigen::Quaterniond::Coefficients,3> (Eigen::Quaterniond::*) () const) &Eigen::Quaterniond::vec)
 
