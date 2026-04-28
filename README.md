@@ -2,6 +2,14 @@
 
 Этот репозиторий содержит рабочую сборку D3VO и исправленную версию g2opy, совместимую с Eigen 3.3.7 и Python 3.8.
 
+# Запуск локально на устройстве
+
+```bash
+conda activate d3vo_clean
+cd ~/D3VO
+python run_d3vo.py
+```
+
 ##  Возможности
 - сборка g2opy
 - исправлена ошибка Quaternion (x/y/z/w)
@@ -17,11 +25,4 @@
 conda env create -f environment.yml
 conda activate d3vo_clean
 
----
 
-# Запуск локально на устройстве
-
-```bash
-conda activate d3vo_clean
-cd ~/D3VO
-python run_d3vo.py
