@@ -16,3 +16,10 @@
 ```bash
 conda env create -f environment.yml
 conda activate d3vo_clean
+
+
+# Запуск локально на устройстве
+```bash
+conda activate d3vo_clean
+cd ~/D3VO
+python run_d3vo.py
